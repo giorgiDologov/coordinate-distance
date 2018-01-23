@@ -31,7 +31,7 @@ public class Action {
 
         //comparator for farest custom PriorityQueue
         FixSizePriorityQueue<Point> farQueue = new FixSizePriorityQueue<>(nFurther, (Point pointOne, Point pointTwo) ->
-                //smaller distance smaller priority (FIFO)
+                //smaller distance bigger priority (FIFO)
                 pointOne.distance(farestPoint) < pointTwo.distance(farestPoint) ? -1 : 1);
 
         //********READING IN BINARY FILE********
