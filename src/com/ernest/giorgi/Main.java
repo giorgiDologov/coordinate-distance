@@ -7,13 +7,13 @@ import java.io.IOException;
  * Created by ernest.giorgi on 08/01/18.
  */
 public class Main {
-    //src/main/resources/points.dat
+    
     private static String FILELOC = "src/resources/points.dat";
 
     // coordinates we compare to (feel free to change it)
     private static Point CLOSE_POINT = new Point(-200,300);
     private static Point FAR_POINT = new Point(1000,25);
-    // size for arrays
+    // size for arrays (feel free tochange it)
     private static int CLOSEST_LIST_MAX = 10;
     private static int FAREST_LIST_MAX = 20;
 
