@@ -1,5 +1,5 @@
 # coordinate-distance
-streaming millions of 2byte ints, getting the seeked ones with custom PriorityQueue
+streaming millions of 2byte shorts, getting the seeked ones with custom PriorityQueue
 
 We have a couple of millions of 2 byte short-s in a binary file, they are 2 dimension coordinates. We would like to
 get the x closest to coordinate (x1,x2), and the 20 farest from (y1,y2) in 2D euclidean space.
