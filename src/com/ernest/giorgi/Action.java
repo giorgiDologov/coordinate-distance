@@ -62,7 +62,7 @@ public class Action {
                 short y;
 
                 do {
-                        //16 bit int stored in 2 bytes
+                        //16 bit short stored in 2 bytes
                         numberOfBytes = stream.read(byteArray,STARTER,LENGTH);
                         x = ByteBuffer.wrap(byteArray).getShort();
                         numberOfBytes = stream.read(byteArray,STARTER,LENGTH);
