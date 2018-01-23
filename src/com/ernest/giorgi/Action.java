@@ -25,24 +25,14 @@ public class Action {
         //********DEFINING COMPARATORS FOR CUSTOM PQ********
 
         //comparator for closest custom PriorityQueue
-        FixSizePriorityQueue<Point> closeQueue = new FixSizePriorityQueue<>(nClosest,
-                new Comparator<Point>() {
-                    @Override
-                    public int compare(Point pointOne, Point pointTwo) {
-                        //bigger distance, bigger priority (FIFO)
-                        return pointOne.distance(closestPoint) > pointTwo.distance(closestPoint) ? -1 : 1;
-                    }
-                });
+        FixSizePriorityQueue<Point> closeQueue = new FixSizePriorityQueue<>(nClosest, (Point pointOne, Point pointTwo) ->
+                //bigger distance, bigger priority (FIFO)
+                pointOne.distance(closestPoint) > pointTwo.distance(closestPoint) ? -1 : 1);
 
         //comparator for farest custom PriorityQueue
-        FixSizePriorityQueue<Point> farQueue = new FixSizePriorityQueue<>(nFurther,
-                new Comparator<Point>() {
-                    @Override
-                    public int compare(Point pointOne, Point pointTwo) {
-                        //smaller distance smaller priority (FIFO)
-                        return pointOne.distance(farestPoint) < pointTwo.distance(farestPoint) ? -1 : 1;
-                    }
-                });
+        FixSizePriorityQueue<Point> farQueue = new FixSizePriorityQueue<>(nFurther, (Point pointOne, Point pointTwo) ->
+                //smaller distance smaller priority (FIFO)
+                pointOne.distance(farestPoint) < pointTwo.distance(farestPoint) ? -1 : 1);
 
         //********READING IN BINARY FILE********
 
